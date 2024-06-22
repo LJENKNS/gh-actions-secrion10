@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign label
-      env:
-        TITLE: ${{ github.event.issue.title }}
+        env:
+          TITLE: ${{ github.event.issue.title }}
         run: |
           if [[ "$TITLE" == *"bug"* ]]; then
           echo "Issue is about a bug!"
